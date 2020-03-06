@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" media="screen,projection">
+    <title>彩虹屁生成器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="pageContainer">
+        <div class="contentArea">
+            <div id="card">
+                <!-- style="text-align: center;" -->
+                <div class="card-panel nameSection surface" style="text-align: center;">
+                    <h4>彩虹屁生成器</h4>
+                    <div style="text-align:right"><h7>——女神节专供版</h7></div>
+                    <div class="input-field">
+                        <input id="name" type="text" placeholder="Ta的名字"/>
+                        <label for="name"></label>
+                    </div>
+                    <div class="button green z-depth-1" onclick="buttonClick()">
+                        生成!
+                    </div>
+                </div>
+                <div class="card-panel" style="text-align: center;">
+                    <div>原项目: <a href="https://github.com/juhaodong/CaiHongPi">CaiHongPi</a></div>
+                    <div>Modified By WJN</div>
+                </div>
+            </div>
+            <div style="width: 70%;margin:auto;" class="hide" id="contentContainer">
+                <div class="card-panel content surface" style="display: flex; flex-direction: column;
+                                                            justify-content: center; align-items: center;">
+                    <div id="content"></div>
+                    <div class="button z-depth-1 green nameSection" style="padding-left: auto;" onclick="buttonClick()">重新生成</div>
+                    <div class="button z-depth-1 blue nameSection" id="copy" data-clipboard-target="#content">复制生成的彩虹屁</div>
+                </div>
+                <div class="card-panel" style="text-align: center;">
+                    <div>原项目: <a href="https://github.com/juhaodong/CaiHongPi">CaiHongPi</a></div>
+                    <div>Modified By WJN</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="data/qinghua.js"></script>
+    <script src="lib/JHCOMMONLIB.js"></script>
+    <script src="data/caihongpi.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="https://cdn.bootcss.com/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+
+</body>
+</html>
