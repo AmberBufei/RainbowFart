@@ -129,18 +129,40 @@ function generatePart(name) {
     return part;
 
 }
-function generateContent(name) {
+function generateContent(name, num = getRandom(2, 7)) {
+
     let content=`<div style="text-align: center;"><h4>给<span class="orange-text">${name}</span>一个人的彩虹屁❤</h4></div> `;
-    for(let i=0;i<getRandom(2,7);i++){
+    // let content=`<h4>给<span class="orange-text">${name}</span>一个人的彩虹屁❤</h4>`;
+    for(let i=0;i<num;i++){
         //console.log("段落"+i);
         content+=generatePart(name);
     }
     content+=`<h3 class="flow-text">${name}, ${addDot(getRandomThing(qinghua,name))}</h3>`;
     return content;
 }
+// let name ="";
+// let is_first_time = true;
 function buttonClick() {
-    let name=findElement('name').value;
+    let name =findElement('name').value;
     $('#card').addClass('hide');
+    // $('#card').css("height", "1100px");
+    // if (name == "")name = findElement('name').value;
+    // $("#card").remove();
+    // var
+    //     contentFather = findElement("contentFather"),
+    //     ref = findElement("btnRegenerate"),
+    //     content = findElement("content");
+
+    // contentFather.removeChild(content);
+    // content = document.createElement('div');
+    // content.id = "content";
+    // content.innerHTML=generateContent(name);
+    // contentFather.insertBefore(content, ref);
     $('#contentContainer').removeClass('hide');
-    findElement('content').innerHTML=generateContent(name);
+    // if (is_first_time) {
+    //     findElement('content').innerHTML=generateContent(name, 1);
+    //     is_first_time = false;
+    // }
+    // else
+        findElement('content').innerHTML=generateContent(name);
 }

@@ -31,10 +31,11 @@
                     <div>Adapted from: <a href="https://github.com/juhaodong/CaiHongPi">CaiHongPi</a></div>
                 </div>
             </div>
-            <div class="hide" id="contentContainer">
-                <div class="card-panel content surface" id="contentFather">
+            <div style="width: 70%;margin:auto;" class="hide" id="contentContainer">
+                <div class="card-panel content surface" style="display: flex; flex-direction: column;
+                                                            justify-content: center; align-items: center;">
                     <div id="content"></div>
-                    <div class="button z-depth-1 green nameSection" id="btnRegenerate" onclick="buttonClick()">重新生成</div>
+                    <div class="button z-depth-1 green nameSection" style="padding-left: auto;" onclick="buttonClick()">重新生成</div>
                     <div class="button z-depth-1 blue nameSection" id="copy" data-clipboard-target="#content">复制生成的彩虹屁</div>
                 </div>
                 <div class="card-panel" style="text-align: center;">
@@ -44,7 +45,7 @@
             </div>
         </div>
     </div>
-
+    
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -58,12 +59,5 @@
     <!-- <script src="lib/clipboard.min.js"></script> -->
     <script src="https://cdn.bootcss.com/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script>
-        if (navigator.userAgent.match(/qq/i))
-            alert("QQ/微信/TIM内置浏览器会导致彩虹屁无法完全显示！请用系统浏览器打开！");
-        if (! /Android|webOS|iPhone|ipad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            window.location.href = 'index_pc.html';
-    }
-    </script>
 </body>
 </html>
