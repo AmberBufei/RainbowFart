@@ -63,12 +63,17 @@ let partEnd=[
     "NAME,一辈子那么长，没想到，我真的只喜欢你一个人。",
     "我就是这么爱你。",
     "像这样的话，我给你讲一年都不会腻。",
+];
 
+let pasagetEnd=[
+    "原谅我冒昧地代表你的命中注定的TA，给你献上这赞美与爱慕~ 希望你能早日遇到那个他，遇到满满的爱意，亲口给你诉说真正动人的情话~ ",
+    "原谅我冒昧地代表你的命中注定的TA，给你献上这赞美与爱慕~ 在今天这个神圣、庄严而隆重的节日里，如果他没亲自表达，那还不快快让他补上！得比这个好听一万倍才够！！",
 ];
 const startProb=30;
 const endProb=30;
 let caihongpi=CHP;
 let qinghua=QH;
+// let qinghua=CHP;
 
 
 
@@ -138,6 +143,7 @@ function generateContent(name, num = getRandom(2, 7)) {
         content+=generatePart(name);
     }
     content+=`<h3 class="flow-text">${name}, ${addDot(getRandomThing(qinghua,name))}</h3>`;
+    content+=`<br><h3 class="flow-text"> ———${name}, ${getRandomThing(pasagetEnd,name)}</h3>`;
     return content;
 }
 // let name ="";
